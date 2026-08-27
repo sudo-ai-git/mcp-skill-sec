@@ -213,7 +213,12 @@ def rule_list() -> Dict[str, Any]:
     return {"rules": out, "count": len(RULES)}
 
 
-if __name__ == "__main__":
+def main_entry() -> None:
+    """Console-script entry point (also used by `python3 mcp_server.py`).
+
+    Defaults to stdio; `--http` serves Streamable HTTP for remote/Smithery
+    deployment. This is what the `mcp-skill-sec` console script invokes.
+    """
     import argparse
     _p = argparse.ArgumentParser(description="mcp-skill-sec MCP server")
     _p.add_argument("--http", action="store_true",
@@ -228,3 +233,7 @@ if __name__ == "__main__":
         uvicorn.run(_app, host=_a.host, port=_a.port, log_level="warning")
     else:
         mcp.run(transport="stdio")
+
+
+if __name__ == "__main__":
+    main_entry()

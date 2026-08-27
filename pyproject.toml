@@ -1,19 +1,33 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcp-skill-sec"
 version = "1.0.0"
-description = "MCP server auditing agent skills/system prompts against 8 malicious-skill supply-chain patterns (deterministic, no-LLM)"
+description = "Deterministic audit of agent skills and prompts against 8 supply-chain attack patterns. No LLM, no network."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-dependencies = ["mcp>=1.0"]
+authors = [{ name = "sudo-ai-git", email = "sudo-ai-git@users.noreply.github.com" }]
+keywords = ["mcp", "mcp-server", "security", "audit", "ai-safety", "supply-chain", "llm-agents"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+dependencies = [
+    "mcp>=1.0",
+]
 
 [project.urls]
+Homepage = "https://github.com/sudo-ai-git/mcp-skill-sec"
 Repository = "https://github.com/sudo-ai-git/mcp-skill-sec"
-Source = "https://github.com/sudo-ai-git/mcp-skill-sec"
+
+[project.scripts]
+mcp-skill-sec = "mcp_server:main_entry"
 
 [tool.setuptools]
 py-modules = ["mcp_server"]

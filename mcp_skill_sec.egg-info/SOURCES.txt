@@ -1,9 +1,0 @@
-README.md
-mcp_server.py
-pyproject.toml
-mcp_skill_sec.egg-info/PKG-INFO
-mcp_skill_sec.egg-info/SOURCES.txt
-mcp_skill_sec.egg-info/dependency_links.txt
-mcp_skill_sec.egg-info/requires.txt
-mcp_skill_sec.egg-info/top_level.txt
-tests/test_mcp_server.py

@@ -37,11 +37,23 @@ there are no critical/high findings and every medium finding is benign.
 
 ## Install & run
 
+**One command (recommended) — installs from the repo, no PyPI token needed:**
+
+```bash
+uv tool install git+https://github.com/sudo-ai-git/mcp-skill-sec
+# then register with your agent:
+mcp-skill-sec                       # run stdio server
+mcp-skill-sec --http --port 8137    # or Streamable HTTP for remote use
+```
+
+Or with `pipx`: `pipx install git+https://github.com/sudo-ai-git/mcp-skill-sec`
+
+**Direct from source (fallback):**
+
 ```bash
 pip install mcp
-mcp install mcp_server.py  --name skill-sec          # register with Claude Desktop
-# or run manually over stdio:
-python3 mcp_server.py
+python3 mcp_server.py               # run stdio
+mcp install mcp_server.py --name skill-sec   # register with Claude Desktop
 ```
 
 ### Claude Desktop / agent config
@@ -50,13 +62,13 @@ python3 mcp_server.py
 {
   "mcpServers": {
     "skill-sec": {
-      "command": "python3",
-      "args": ["/absolute/path/to/mcp_server.py"]
+      "command": "mcp-skill-sec",
+      "args": []
     }
   }
 }
 ```
-
+   
 ## Example
 
 ```text
