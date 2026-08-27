@@ -69,6 +69,14 @@ skill-sec: /tmp/downloaded-skill/SKILL.md
   action : remove the literal secrets, drop the fetch-and-run, re-audit
 ```
 
+## Part of a family
+
+This is one of three **deterministic, no-LLM** agent-trust MCP servers by `sudo-ai-git`:
+
+- [`mcp-skill-sec`](https://github.com/sudo-ai-git/mcp-skill-sec) — pre-install skill/security audit (this repo)
+- [`mcp-verify-claim`](https://github.com/sudo-ai-git/mcp-verify-claim) — evidence-gated, honestly-tiered claim reporting
+- [`mcp-benchmark-hygiene`](https://github.com/sudo-ai-git/mcp-benchmark-hygiene) — pytest config-leakage / eval-honesty detection
+
 ## License & provenance
 
 MIT. Written by `sudo-ai-git`. This is a standalone security/verification
