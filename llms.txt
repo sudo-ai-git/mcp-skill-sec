@@ -1,0 +1,31 @@
+# mcp-skill-sec
+
+> Deterministic, no-LLM MCP server that audits agent skills, system prompts, and downloaded skill collections against 8 malicious-skill supply-chain attack patterns (R1 prompt-injection, R2 data-exfiltration, R3 hardcoded secrets, R4 dangerous commands, R5 obfuscation, R6 untrusted fetch, R7 credential access, R8 privilege escalation).
+
+## When to use
+- Before installing any downloaded agent skill / SKILL.md / AGENTS.md / CLAUDE.md.
+- To scan a system prompt or pasted instructions you did not author.
+- To audit a whole directory of agent skills and get per-file verdicts + a summary.
+
+## Key facts
+- No LLM. No network. Deterministic. Self-hostable. MIT. Crown-jewel-free (no proprietary method).
+- Verdict PASS only when no critical/high findings and every medium is benign; otherwise FLAG with per-finding severity, line number, and evidence.
+- Works with Claude Code, Cursor, Copilot, OpenClaw, Codex CLI, and any MCP-compatible agent.
+
+## Tools (MCP)
+- audit_text(text, filename) — audit a string.
+- audit_skill_file(path) — audit a SKILL.md / AGENTS.md / CLAUDE.md on disk.
+- audit_directory(path, pattern) — audit a skills collection.
+- rule_list() — dump the R1-R8 rule catalog.
+
+## Install
+```bash
+pip install mcp
+mcp install mcp_server.py --name skill-sec
+python3 mcp_server.py   # stdio
+```
+
+## Links
+- Repo: https://github.com/sudo-ai-git/mcp-skill-sec
+- server.json: https://github.com/sudo-ai-git/mcp-skill-sec/blob/main/server.json
+- Full README: https://github.com/sudo-ai-git/mcp-skill-sec/blob/main/README.md
