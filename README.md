@@ -98,3 +98,7 @@ tool; it encodes no proprietary method. It is the MCP expression of the
 ## Official MCP Registry metadata
 
 mcp-name: io.github.sudo-ai-git/mcp-skill-sec
+
+## Hire a custom integration
+
+Need this connected to *your* internal system (auth, logging, security-scan pass, hosted)? Open a [custom-build request](https://github.com/sudo-ai-git/agensi-builds/issues/new?template=custom-build-request.yml). MIT reference assets are free to use either way.
