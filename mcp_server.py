@@ -214,4 +214,17 @@ def rule_list() -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    import argparse
+    _p = argparse.ArgumentParser(description="mcp-skill-sec MCP server")
+    _p.add_argument("--http", action="store_true",
+                    help="serve over Streamable HTTP (default: stdio; for remote/Smithery publish)")
+    _p.add_argument("--host", default="0.0.0.0", help="HTTP bind host")
+    _p.add_argument("--port", type=int, default=8000, help="HTTP port")
+    _a = _p.parse_args()
+    if _a.http:
+        import uvicorn
+        _app = mcp.streamable_http_app()
+        print(f"[mcp-skill-sec] serving Streamable HTTP on {_a.host}:{_a.port}", flush=True)
+        uvicorn.run(_app, host=_a.host, port=_a.port, log_level="warning")
+    else:
+        mcp.run(transport="stdio")
