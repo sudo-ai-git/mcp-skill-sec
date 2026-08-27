@@ -74,3 +74,7 @@ skill-sec: /tmp/downloaded-skill/SKILL.md
 MIT. Written by `sudo-ai-git`. This is a standalone security/verification
 tool; it encodes no proprietary method. It is the MCP expression of the
 `skill-sec` agent skill (same rules, callable as a server instead of a skill).
+
+## Official MCP Registry metadata
+
+mcp-name: io.github.sudo-ai-git/mcp-skill-sec
