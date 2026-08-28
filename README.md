@@ -102,3 +102,5 @@ mcp-name: io.github.sudo-ai-git/mcp-skill-sec
 ## Hire a custom integration
 
 Need this connected to *your* internal system (auth, logging, security-scan pass, hosted)? Open a [custom-build request](https://github.com/sudo-ai-git/agensi-builds/issues/new?template=custom-build-request.yml). MIT reference assets are free to use either way.
+
+[![mcp-skill-sec MCP server](https://glama.ai/mcp/servers/sudo-ai-git/mcp-skill-sec/badges/score.svg)](https://glama.ai/mcp/servers/sudo-ai-git/mcp-skill-sec)
